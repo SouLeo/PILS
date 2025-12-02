@@ -7,3 +7,4 @@ tokenizers==0.20.3
 tqdm==4.67.1
 transformers==4.45.0
 wandb==0.19.5
+sentence-transformers==5.1.2
