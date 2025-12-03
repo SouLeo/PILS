@@ -42,9 +42,9 @@ def load_one_million_instructions() -> datasets.Dataset:
     # has only "train" split, and "system" (system prompt)
     # and "user" (user input) columns
     dataset_dict = datasets.load_dataset("wentingzhao/one-million-instructions")
-    dataset_dict = dataset_map_multi_worker(dataset_dict, create_ompi_ex)
+    dataset_dict = dataset_map_multi_worker(dataset_dict["train"], create_ompi_ex)
 
-    return dataset_dict["train"]
+    return dataset_dict
 
 
 def load_awesomegpt_prompts() -> datasets.DatasetDict:
